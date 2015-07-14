@@ -1,6 +1,6 @@
 	.tabs
 	{
-		position: relative;
+		position: absolute;
 		display: block;
 		width: 40em;
 		height: 15em;
