@@ -1,0 +1,173 @@
+	.tabs
+	{
+		position: relative;
+		display: block;
+		width: 40em;
+		height: 15em;
+		margin: 2em auto;
+	}
+
+	.tabs .tab1, .tab2
+	{
+		border: 1px solid #BECDEE; 
+		position: absolute;
+		display: inline-block;
+		top: 1.8em;
+		height: 22em;
+		width: 55em;
+		left: 0;
+		padding: 10px ;
+		border-radius: 5px;
+		z-index: 0;
+		background-color: #E4F0FF;
+	}
+
+	.tabs .tab1
+	{
+		z-index: 1;
+	}
+
+	.tabs div h2
+	{
+		position: absolute;
+		font-size: 1em;
+		width: 120px;
+		height: 1.8em;
+		top: -1.85em;
+		left: 20px;
+		padding: 0;
+		margin: 0 ;
+		background-color: #E4F0FF;
+		text-align: center;
+		border-radius: 5px 5px 0px 0px;
+	}
+
+	.tabs .tab1 h2
+	{
+		border-right: 1px solid #DDDDDD;
+		border-top: 1px solid #DDDDDD;
+		border-left: 1px solid #DDDDDD;
+	}
+
+	.tabs .tab2 h2
+	{
+		left: 150px;
+		border-right: 1px solid #DDDDDD;
+		border-left: 1px solid #DDDDDD;
+		border-top: 1px solid #DDDDDD;
+		background-color: white;
+	}
+
+	.tabs  h2 a
+	{	
+		line-height: 1.8em;
+		text-decoration: none;
+		color: black;
+	}
+
+	.tabs .tab1 div
+	{
+		width: 47%;
+		height: 18em;
+		float: left;
+		border: 1px solid #A5BBE4;
+		border-radius: 5px;
+	}
+
+	.tabs .tab1 .con2
+	{
+		margin: 1em 1em 1em 0.5em;
+		background-color: white;	
+	}
+
+	.tabs .tab1 .con1
+	{
+		margin: 1em 0.5em 1em 1em;
+		background-color: white;
+	}
+
+	.tabs .tab1 .con2 .image
+	{
+		border: 1px solid black;
+		position: relative;
+		top: 2em;
+		left: 3em;
+		height: 182px;
+		width: 312px;
+		border-radius:0px;
+	}
+
+	.tabs .tab1 .con2 .head
+	{
+		padding-left: 1.8em;
+		padding-top: 1em;
+		margin: 0px;
+		color: #757575;
+		font-size: 1.5em;
+		font-weight: bold;
+		font-family: Helvetica, Arial, Sans-Serif;
+	}
+
+	.tabs .tab1 .learn
+	{
+		position: absolute;	
+		left: 9.2em;
+		top: 18.5em;
+		width: 10em;
+		height: 2em;
+		text-align: center;
+		background-color: #55A100;
+		color: white;
+		text-shadow:1px 1px black 1px;
+		line-height: 2em;
+		font-weight: bold;
+		font-family: Helvetica, Arial, Sans-Serif;
+		border-radius:3px;
+	}
+
+	.p_h1
+	{
+		padding-left: 1em;
+		font-weight: bold;
+		font-size: 1.5em;
+		font-family: Helvetica, Arial, Sans-Serif;
+		color: #757575;
+	}
+
+	.p_h2
+	{
+		text-align: justify;
+		padding-left: 1.5em;
+		padding-right: 1.5em;
+		font-weight: 500;
+		font-size: 1em;
+		font-family: Helvetica, Arial, Sans-Serif;
+		color: #757575;	
+	}
+
+	.p_h3
+	{		
+		padding: 1.5em;
+		padding-top:0em;
+		font-weight: 500;
+		font-size: 1em;
+		font-family: Helvetica, Arial, Sans-Serif;
+		color: #6191D9;	
+	}
+
+	.tabs .tab1 .learn:hover
+	{
+		background-color: #009933;
+	}
+
+	#tabb1
+	{
+		font-family: Helvetica, Arial, Sans-Serif;
+		color: #09569C;	
+	}
+
+	#tabb2
+	{
+		font-family: Helvetica, Arial, Sans-Serif;
+		color: #717171;	
+	}
