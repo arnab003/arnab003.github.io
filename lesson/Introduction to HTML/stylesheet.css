@@ -2,9 +2,11 @@
 	{
 		position: absolute;
 		display: block;
-		width: 40em;
+		width: 55em;
 		height: 15em;
 		margin: 2em auto;
+		left: 18%;
+		top: 15%;
 	}
 
 	.tabs .tab1, .tab2
@@ -17,7 +19,7 @@
 		width: 55em;
 		left: 0;
 		padding: 10px ;
-		border-radius: 5px;
+		border-radius: 7px;
 		z-index: 0;
 		background-color: #E4F0FF;
 	}
@@ -71,7 +73,7 @@
 		height: 18em;
 		float: left;
 		border: 1px solid #A5BBE4;
-		border-radius: 5px;
+		border-radius: 7px;
 	}
 
 	.tabs .tab1 .con2
