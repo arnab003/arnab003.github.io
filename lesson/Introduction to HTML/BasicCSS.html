@@ -3,13 +3,36 @@
 <head>
 <link rel="stylesheet" type="text/css" href="stylesheet.css">
 	<title>BasicCSS</title>
+	<script type="text/javascript">
+    function clk(a)
+    {
+    	if(a=="t1")
+    	{
+    		document.getElementById(a).style.zIndex = "1";
+    		document.getElementById("t2").style.zIndex = "0";
+    		document.getElementById("t1h2").style.backgroundColor= "#e4efff";
+    		document.getElementById("t2h2").style.backgroundColor= "white";
+    		document.getElementById("tabb1").style.color= "#09569d";
+    		document.getElementById("tabb2").style.color= "#717171";
+    	}
+    	else if(a=="t2")
+    	{
+    		document.getElementById(a).style.zIndex = "1";
+    		document.getElementById("t1").style.zIndex = "0";
+    		document.getElementById("t2h2").style.backgroundColor= "#e4efff";
+    		document.getElementById("t1h2").style.backgroundColor= "white";
+    		document.getElementById("tabb1").style.color= "#717171";
+    		document.getElementById("tabb2").style.color= "#09569d";
+    	}
+    };
+	</script>
 </head>
 <body>
 
 <div class="tabs">
 
-	<div class="tab1">
-		<h2><a href="#"><span id="tabb1">News</span></a></h2>
+	<div class="tab1" id="t1">
+		<h2 id="t1h2"><a href="#" onclick="clk('t1');"><span id="tabb1">News</span></a></h2>
 
 		<div class="con1">
 			<p class="p_h1">Welcome </p>
@@ -27,14 +50,13 @@
 			<div class="image"><img src="image.jpg" alt="Image Preview"></div>
 		</div>
 
-		<a href="#"><div class="learn">LEARN MORE</div></a>
+		<a href="#" onclick="clk('t2');"><div class="learn">LEARN MORE</div></a>
 
 	</div>
 	
-	<div class="tab2">
-		<h2><a href="#"><span id="tabb2">Subscribe</span></a></h2>
-		<div>This content appears on tab 2.</div> 
-		<div>This content appears on tab 2</div>
+	<div class="tab2" id="t2">
+		<h2 id="t2h2"><a href="#" onclick="clk('t2');"><span id="tabb2">Subscribe</span></a></h2>
+		Your are in tab 2.
 	</div>
 
 </div>

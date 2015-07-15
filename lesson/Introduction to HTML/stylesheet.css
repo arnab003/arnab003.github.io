@@ -11,17 +11,17 @@
 
 	.tabs .tab1, .tab2
 	{
-		border: 1px solid #BECDEE; 
+		border: 1px solid #bdcdee; 
 		position: absolute;
 		display: inline-block;
 		top: 1.8em;
-		height: 22em;
+		height: 21em;
 		width: 55em;
 		left: 0;
-		padding: 10px ;
+		padding: 10px 0px 10px 0px ;
 		border-radius: 7px;
 		z-index: 0;
-		background-color: #E4F0FF;
+		background-color: #e4efff;
 	}
 
 	.tabs .tab1
@@ -39,7 +39,7 @@
 		left: 20px;
 		padding: 0;
 		margin: 0 ;
-		background-color: #E4F0FF;
+		background-color: #e4efff;
 		text-align: center;
 		border-radius: 5px 5px 0px 0px;
 	}
@@ -76,16 +76,19 @@
 		border-radius: 7px;
 	}
 
-	.tabs .tab1 .con2
-	{
-		margin: 1em 1em 1em 0.5em;
-		background-color: white;	
-	}
-
 	.tabs .tab1 .con1
 	{
-		margin: 1em 0.5em 1em 1em;
+		margin: 1em;
 		background-color: white;
+		position: absolute;
+	}
+
+	.tabs .tab1 .con2
+	{
+		margin: 1em;
+		background-color: white;
+		position: absolute;	
+		left: 49%;
 	}
 
 	.tabs .tab1 .con2 .image
@@ -101,11 +104,11 @@
 
 	.tabs .tab1 .con2 .head
 	{
-		padding-left: 1.8em;
+		padding-left: 2em;
 		padding-top: 1em;
 		margin: 0px;
 		color: #757575;
-		font-size: 1.5em;
+		font-size: 22px;
 		font-weight: bold;
 		font-family: Helvetica, Arial, Sans-Serif;
 	}
@@ -118,8 +121,8 @@
 		width: 10em;
 		height: 2em;
 		text-align: center;
-		background-color: #55A100;
-		color: white;
+		background-color: #56a200;
+		color: #ffffff;
 		text-shadow:1px 1px black 1px;
 		line-height: 2em;
 		font-weight: bold;
@@ -131,7 +134,7 @@
 	{
 		padding-left: 1em;
 		font-weight: bold;
-		font-size: 1.5em;
+		font-size: 22px;
 		font-family: Helvetica, Arial, Sans-Serif;
 		color: #757575;
 	}
@@ -141,20 +144,18 @@
 		text-align: justify;
 		padding-left: 1.5em;
 		padding-right: 1.5em;
-		font-weight: 500;
-		font-size: 1em;
+		font-size: 13.81px;
 		font-family: Helvetica, Arial, Sans-Serif;
-		color: #757575;	
+		color: #6e6e6e;	
 	}
 
 	.p_h3
 	{		
 		padding: 1.5em;
 		padding-top:0em;
-		font-weight: 500;
-		font-size: 1em;
+		font-size: 13.81px;
 		font-family: Helvetica, Arial, Sans-Serif;
-		color: #6191D9;	
+		color:  #1b6bce;	
 	}
 
 	.tabs .tab1 .learn:hover
@@ -165,11 +166,13 @@
 	#tabb1
 	{
 		font-family: Helvetica, Arial, Sans-Serif;
-		color: #09569C;	
+		color: #09569d;	
+		font-size: 14px;
 	}
 
 	#tabb2
 	{
 		font-family: Helvetica, Arial, Sans-Serif;
 		color: #717171;	
+		font-size: 14px;
 	}
