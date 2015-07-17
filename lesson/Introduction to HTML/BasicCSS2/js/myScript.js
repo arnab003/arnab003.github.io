@@ -249,40 +249,40 @@ function clk(a)
 
     function overlay(cb,bool) 
     {    
-    el = document.getElementById("overlay");
-    el.style.visibility = bool ? "visible" : "hidden";
-    var cb1_sub=document.getElementById("cb1_sub");
-    var cb2_sub=document.getElementById("cb2_sub");
-    var cb3_sub=document.getElementById("cb3_sub");
+	    el = document.getElementById("overlay");
+	    el.style.visibility = bool ? "visible" : "hidden";
+	    var cb1_sub=document.getElementById("cb1_sub");
+	    var cb2_sub=document.getElementById("cb2_sub");
+	    var cb3_sub=document.getElementById("cb3_sub");
 
-    if(cb==1)
-    {
-        cb1_sub_1.checked=false;
-        cb1_sub_2.checked=false;
-        cb1_sub.style.display="block";
-        cb2_sub.style.display="none";
-        cb3_sub.style.display="none";
-    }
+	    if(cb==1)
+	    {
+	        cb1_sub_1.checked=false;
+	        cb1_sub_2.checked=false;
+	        cb1_sub.style.display="block";
+	        cb2_sub.style.display="none";
+	        cb3_sub.style.display="none";
+	    }
 
-    if(cb==2)
-    {
-        cb2_sub_1.checked=false;
-        cb2_sub_2.checked=false;
-        cb2_sub_3.checked=false;
-        cb1_sub.style.display="none";
-        cb2_sub.style.display="block";
-        cb3_sub.style.display="none";
-    }
+	    if(cb==2)
+	    {
+	        cb2_sub_1.checked=false;
+	        cb2_sub_2.checked=false;
+	        cb2_sub_3.checked=false;
+	        cb1_sub.style.display="none";
+	        cb2_sub.style.display="block";
+	        cb3_sub.style.display="none";
+	    }
 
-    if(cb==3)
-    {
-        cb3_sub_1.checked=false;
-        cb3_sub_2.checked=false;
-        cb3_sub_3.checked=false;
-        cb1_sub.style.display="none";
-        cb2_sub.style.display="none";
-        cb3_sub.style.display="block";
-    }
+	    if(cb==3)
+	    {
+	        cb3_sub_1.checked=false;
+	        cb3_sub_2.checked=false;
+	        cb3_sub_3.checked=false;
+	        cb1_sub.style.display="none";
+	        cb2_sub.style.display="none";
+	        cb3_sub.style.display="block";
+	    }
     }
 
     function clearSelect()
