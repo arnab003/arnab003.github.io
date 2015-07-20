@@ -1,0 +1,47 @@
+		body
+		{
+			margin: 0;
+			padding: 0;
+		}
+
+		#mainContainer
+		{
+			display: inline-block;
+			width: 90%;
+			height: 90%;
+			margin: 5%;
+		}
+
+		.blocks
+		{
+			width: 80px;
+			height: 100px;
+			float: left;
+			margin-left: 20px;
+			margin-top: 10px;
+			display: inline;
+			text-align: right;
+			margin: 1.5%;
+		}
+
+		input[type=text]
+		{
+			border:1px solid;
+			width: 100%;
+			text-align: right;
+		}
+
+		input[type=button]
+		{
+			margin-right: 3%;
+		}
+
+		span
+		{	
+			float: left;
+			width: 100%;
+		}
+		.head
+		{
+			margin: 5% 0% 0% 42%;
+		}
