@@ -64,17 +64,7 @@ function getRandomInt()
 
 		   	function rtl(inp)
 			{   
-				if (inp.createTextRange) 
-				{
-					var part = inp.createTextRange();
-					part.move("character", 0);
-					part.select();
-				}
-				else if (inp.setSelectionRange)
-				{
-					inp.setSelectionRange(0, 0);
-				}
-				inp.focus();
+				inp.setSelectionRange(0, 0);
 			}
 
 		   	function numbercheck(e)
