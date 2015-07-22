@@ -163,6 +163,12 @@ var prevValue=0;
 				document.getElementById("view").value = parseFloat(prevValue) /  (parseFloat(currentValue)/100) ;
 				flagClearText=true;
 			}
+			else if (operator=="REM") 
+			{
+				currentValue=document.getElementById("view").value;
+				document.getElementById("view").value = parseFloat(prevValue) %  ((parseFloat(currentValue)/100)*parseFloat(prevValue));
+				flagClearText=true;
+			}
 		}
 		else if (flagPercent==false) 
 		{
