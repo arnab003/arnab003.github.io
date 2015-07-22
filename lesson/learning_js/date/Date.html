@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+
+	</style>
+	<script type="text/javascript">
+
+	function res1()
+	{
+	var date1 = new Date(document.getElementById("d1").value);
+	var date2 = new Date(document.getElementById("d2").value);
+
+	var diff1 = date2 - date1;
+
+	var days = Math.round(diff1/(1000*60*60*24));
+	var weeks = Math.round(days/7);
+	var months=date2.getMonth()-date1.getMonth();
+	var years= Math.round(date2.getFullYear()- date1.getFullYear());
+
+	document.getElementById("r1").value=years+" yrs. "+months+" months "+weeks+" weeks "+days+" days";
+	}
+
+	function res2()
+	{		
+    var h1,h2,min1,min2,diff,hour,minute;
+
+    h1=document.getElementById("d3_h").value;
+    min1=document.getElementById("d3_m").value;
+    h2=document.getElementById("d4_h").value;
+    min2=document.getElementById("d4_m").value;    
+    
+    if(document.getElementById("pm1").checked) 
+        {
+            h1=parseInt(h1)+12;            
+        }
+
+    if(document.getElementById("pm2").checked) 
+        {
+            h2=parseInt(h2)+12;            
+        }    
+        
+    min1=parseInt(min1)+parseInt(h1)*60;
+    min2=parseInt(min2)+parseInt(h2)*60;
+	diff=min2-min1;
+	hour=Math.round(diff/60);
+	minute=diff%60;
+	if(hour<0)
+	 hour+=24;
+	if(minute<0)
+	 minute+=60;
+	document.getElementById("r2").value=hour+":"+minute;        
+	}
+
+	function res3()
+	{
+		var date=new Date(document.getElementById("d5").value);
+		var x= date.getTime();
+		x=x+(document.getElementById("d5_h").value*3600000)+(document.getElementById("d5_m").value*60000)+(document.getElementById("d6_h").value*3600000)+(document.getElementById("d6_m").value*60000);
+		var reslt=new Date(x);
+		document.getElementById("r3").value=reslt;
+	}
+
+	</script>
+</head>
+<body>
+	<table cellpadding="5" cellspacing="5">
+		<tr>
+			<td>Date 1:</td>
+			<td><input type="date" id="d1" placeholder="yyyy/mm/dd"></td>
+		</tr>
+		<tr>
+			<td>Date 2:</td>
+			<td><input type="date" id="d2" placeholder="yyyy/mm/dd"></td>
+		</tr>
+		<tr>
+			<td><input type="button" value="Result" onclick="res1();"></td>
+			<td><input type="text" id="r1"></td>
+		</tr>
+	</table>
+	<br/>
+	<br/>
+	<br/>
+
+	<table cellpadding="5" cellspacing="5">
+		<tr>
+			<td>Date 1:</td>
+			<td><input type="number" id="d3_h" placeholder="HH" min="0" max="12">
+			<input type="number" id="d3_m" placeholder="MM" min="0" max="59">
+			<input type="radio" name="mode1" value="AM" id="am1"> AM<input type="radio" name="mode1" value="PM" id="pm1"> PM</td>
+		</tr>
+		<tr>
+			<td>Date 2:</td>
+			<td><input type="number" id="d4_h" placeholder="HH" min="0" max="12">
+			<input type="number" id="d4_m" placeholder="MM" min="0" max="59">
+			<input type="radio" name="mode2" value="AM" id="am2"> AM<input type="radio" name="mode2" value="PM" id="pm2"> PM</td>
+		</tr>
+		<tr>
+			<td><input type="button" value="Result" onclick="res2();"></td>
+			<td><input type="text" id="r2"></td>
+		</tr>
+	</table>
+	<br/>
+	<br/>
+	<br/>
+
+	<table cellpadding="5" cellspacing="5">
+		<tr>
+			<td>Date 1:</td>
+			<td><input type="date" id="d5" placeholder="yyyy/mm/dd"></td>
+			<td><input type="number" id="d5_h" placeholder="HH" min="0" max="24">
+			<input type="number" id="d5_m" placeholder="MM" min="0" max="59">
+		</tr>
+		<tr>
+			<td>Enter Hour</td>
+			<td></td>
+			<td><input type="number" id="d6_h" placeholder="HH">
+			<input type="number" id="d6_m" placeholder="MM" min="0" max="59">
+		</tr>
+		<tr>
+			<td><input type="button" value="Result" onclick="res3();"></td>
+			<td></td>
+			<td><input type="text" id="r3" size="30"></td>
+		</tr>
+	</table>
+
+</body>
+</html>
