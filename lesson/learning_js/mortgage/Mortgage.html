@@ -11,30 +11,32 @@
 		var m_len=document.form1.month.value.length;
 		var e_len=document.form1.emi.value.length;
 
+		var p,m,e,i;
+
 		if(l_len!=0 && r_len!=0 && m_len!=0)
 		{
-			var p = document.form1.loan.value;
-			var m  = document.form1.month.value;
-			var i   = document.form1.rate.value / 1200;
+			 p = document.form1.loan.value;
+			 m  = document.form1.month.value;
+			 i   = document.form1.rate.value / 1200;
 			document.form1.emi.value = Math.round(p* i* Math.pow((1+i),m)/ ((Math.pow((1+i),m))-1));
 		}
 		else if(e_len!=0 && m_len!=0 && r_len!=0)
 		{
-			var e = document.form1.emi.value;
-			var m  = document.form1.month.value;
-			var i   = document.form1.rate.value / 1200;
+			 e = document.form1.emi.value;
+			 m  = document.form1.month.value;
+			 i   = document.form1.rate.value / 1200;
 			document.form1.loan.value = Math.round(e * ((Math.pow(1+i,m))-1)/(i*(Math.pow((1+i),m)))); 
 		}
 		else if(e_len!=0 && l_len!=0 && r_len!=0)
 		{
-			var e = document.form1.emi.value;
-			var p  = document.form1.loan.value;
-			var i   = document.form1.rate.value / 1200;
+			 e = document.form1.emi.value;
+			 p  = document.form1.loan.value;
+			 i   = document.form1.rate.value / 1200;
 			var month=Math.round((Math.log((e)/(e-(p*i))))/(Math.log(1+i))); 
 			if(isNaN(month))
 				alert("Loan cannot be paid!");
 			else
-			document.form1.month.value = Math.round((Math.log((e)/(e-(p*i))))/(Math.log(1+i))); 
+				document.form1.month.value = month; 
 		}
 		else
 		{
