@@ -30,6 +30,10 @@
 			var e = document.form1.emi.value;
 			var p  = document.form1.loan.value;
 			var i   = document.form1.rate.value / 1200;
+			var month=Math.round((Math.log((e)/(e-(p*i))))/(Math.log(1+i))); 
+			if(isNan(month))
+				alert("Loan cannot be paid!");
+			else
 			document.form1.month.value = Math.round((Math.log((e)/(e-(p*i))))/(Math.log(1+i))); 
 		}
 		else
