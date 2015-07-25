@@ -55,26 +55,6 @@
 		padding-top: 5%;
 	}
 
-	@-webkit-keyframes hvr-ripple-out {
-	  100% {
-	    top: -12px;
-	    right: -12px;
-	    bottom: -12px;
-	    left: -12px;
-	    opacity: 0;
-	  }
-	}
-
-	@keyframes hvr-ripple-out {
-	  100% {
-	    top: -12px;
-	    right: -12px;
-	    bottom: -12px;
-	    left: -12px;
-	    opacity: 0;
-	  }
-	}
-
 	.buttons input[type=button]
 	{
 		width: 21%;
@@ -83,21 +63,4 @@
 		left: 10%;
 		display: inline-block;
 		vertical-align: middle;
-		-webkit-transform: translateZ(0);
-		transform: translateZ(0);
-		box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-		-webkit-backface-visibility: hidden;
-		backface-visibility: hidden;
-		-moz-osx-font-smoothing: grayscale;
-		overflow: hidden;
-		-webkit-transition-duration: 0.3s;
-		transition-duration: 0.3s;
-		-webkit-transition-property: color, background-color;
-		transition-property: color, background-color;
-	}
-
-	.buttons input[type=button]:hover, .buttons input[type=button]:focus, .buttons input[type=button]:active
-	{
-		background-color: #2098d1;
-		color: white;
 	}
