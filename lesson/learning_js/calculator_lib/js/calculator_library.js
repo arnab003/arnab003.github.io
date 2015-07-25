@@ -542,7 +542,7 @@
 			var divDC=createElement("div", {"style":"width:95%; margin:4% 2% 0% 2%;"}, DCwrapper);			
 			var t = document.createTextNode("Enter Time Interval:");
 			divDC.appendChild(t);
-			createElement("input", {"type":"number","id":"d6_h","min":"0","placeholder":"HH","style":"margin-left:36%;"}, divDC);
+			createElement("input", {"type":"number","id":"d6_h","min":"0","placeholder":"HH","style":"margin-left:8%;"}, divDC);
 			createElement("input", {"type":"number","id":"d6_m","min":"0","max":"59","placeholder":"MM"}, divDC);
 
 			var divDC=createElement("div", {"style":"width:95%; margin:4% 2% 4% 2%;"}, DCwrapper);
