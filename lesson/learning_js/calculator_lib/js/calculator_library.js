@@ -623,7 +623,7 @@
 						 hour+=24;
 						if(minute<0)
 						 minute+=60;
-						document.getElementById("r2").value=hour+":"+minute; 
+						document.getElementById("r2").value=hour+" hours "+minute+" minutes"; 
 					}  
 				}  
 				else
