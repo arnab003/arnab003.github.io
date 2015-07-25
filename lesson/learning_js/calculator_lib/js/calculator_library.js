@@ -396,7 +396,11 @@
 				var t = document.createTextNode(contentMC[i].title);
 				divMC.appendChild(t);
 				var inp=createElement("input", {"type":"text","name":contentMC[i].name,"size":"12","style":"text-align:right; float:right"}, divMC);
-				var inp=
+				inp.onkeypress=function()
+				 {	
+			   		return isNumber(event);
+
+				 };
 			}
 
 			var divMC=createElement("div", {"style":"width:95%; margin:2%"}, formMC);	
@@ -489,18 +493,8 @@
 			var divDC=createElement("div", {"style":"width:95%; margin:4% 2% 0% 2%;"}, DCwrapper);			
 			var t = document.createTextNode("Enter Time 1:");
 			divDC.appendChild(t);
-			var inp=createElement("input", {"type":"number","id":"d3_h","min":"0","max":"12","placeholder":"HH","style":"margin-left:21%;"}, divDC);
-			inp.onkeypress=function()
-				 {	
-			   		return isNumber(event);
-
-				 };
-			var inp=createElement("input", {"type":"number","id":"d3_m","min":"0","max":"59","placeholder":"MM"}, divDC);
-			inp.onkeypress=function()
-				 {	
-			   		return isNumber(event);
-
-				 };
+			createElement("input", {"type":"number","id":"d3_h","min":"0","max":"12","placeholder":"HH","style":"margin-left:21%;"}, divDC);
+			createElement("input", {"type":"number","id":"d3_m","min":"0","max":"59","placeholder":"MM"}, divDC);
 			createElement("input", {"type":"radio","id":"am1","name":"mode1","value":"AM"}, divDC);
 			var lbl=createElement("span", {}, divDC);
 			var t = document.createTextNode("AM");
@@ -513,18 +507,8 @@
 			var divDC=createElement("div", {"style":"width:95%; margin:4% 2% 0% 2%;"}, DCwrapper);			
 			var t = document.createTextNode("Enter Time 2:");
 			divDC.appendChild(t);
-			var inp=createElement("input", {"type":"number","id":"d4_h","min":"0","max":"12","placeholder":"HH","style":"margin-left:21%;"}, divDC);
-			inp.onkeypress=function()
-				 {	
-			   		return isNumber(event);
-
-				 };
-			var inp=createElement("input", {"type":"number","id":"d4_m","min":"0","max":"59","placeholder":"MM"}, divDC);
-			inp.onkeypress=function()
-				 {	
-			   		return isNumber(event);
-
-				 };var inp=
+			createElement("input", {"type":"number","id":"d4_h","min":"0","max":"12","placeholder":"HH","style":"margin-left:21%;"}, divDC);
+			createElement("input", {"type":"number","id":"d4_m","min":"0","max":"59","placeholder":"MM"}, divDC);
 			createElement("input", {"type":"radio","id":"am2","name":"mode2","value":"AM"}, divDC);
 			var lbl=createElement("span", {}, divDC);
 			var t = document.createTextNode("AM");
@@ -552,34 +536,14 @@
 			var t = document.createTextNode("Enter Date & Time:");
 			divDC.appendChild(t);
 			var inp=createElement("input", {"type":"date","id":"d5","style":"text-align:right;margin-left:1%;"}, divDC);
-			var inp=createElement("input", {"type":"number","id":"d5_h","min":"0","max":"12","placeholder":"HH"}, divDC);
-			inp.onkeypress=function()
-				 {	
-			   		return isNumber(event);
-
-				 };
-			var inp=createElement("input", {"type":"number","id":"d5_m","min":"0","max":"59","placeholder":"MM"}, divDC);
-			inp.onkeypress=function()
-				 {	
-			   		return isNumber(event);
-
-				 };
+			createElement("input", {"type":"number","id":"d5_h","min":"0","max":"12","placeholder":"HH"}, divDC);
+			createElement("input", {"type":"number","id":"d5_m","min":"0","max":"59","placeholder":"MM"}, divDC);
 
 			var divDC=createElement("div", {"style":"width:95%; margin:4% 2% 0% 2%;"}, DCwrapper);			
 			var t = document.createTextNode("Enter Time Interval:");
 			divDC.appendChild(t);
-			var inp=createElement("input", {"type":"number","id":"d6_h","min":"0","max":"12","placeholder":"HH","style":"margin-left:36%;"}, divDC);
-			inp.onkeypress=function()
-				 {	
-			   		return isNumber(event);
-
-				 };
-			var inp=createElement("input", {"type":"number","id":"d6_m","min":"0","max":"59","placeholder":"MM"}, divDC);
-			inp.onkeypress=function()
-				 {	
-			   		return isNumber(event);
-
-				 };
+			createElement("input", {"type":"number","id":"d6_h","min":"0","max":"12","placeholder":"HH","style":"margin-left:36%;"}, divDC);
+			createElement("input", {"type":"number","id":"d6_m","min":"0","max":"59","placeholder":"MM"}, divDC);
 
 			var divDC=createElement("div", {"style":"width:95%; margin:4% 2% 4% 2%;"}, DCwrapper);
 			var inp=createElement("input", {"type":"button","value":"Result"}, divDC);
@@ -690,7 +654,6 @@
 					alert("Empty fields!");
 				}
 			}
-
 			function isNumber(evt) 
 			{
 			    evt = (evt) ? evt : window.event;
