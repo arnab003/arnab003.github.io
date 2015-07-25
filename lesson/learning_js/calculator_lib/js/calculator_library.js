@@ -482,7 +482,7 @@
 			{
 				res1();
 			}
-			var inp=createElement("input", {"type":"text","id":"r1","size":"30","style":"text-align:right; float:right","placeholder":"Date Difference"}, divDC);
+			var inp=createElement("input", {"type":"text","id":"r1","size":"42","style":"text-align:right; float:right","placeholder":"Date Difference"}, divDC);
 			inp.onkeypress=function()
 			{
 				return false;
@@ -568,10 +568,10 @@
 
 					var days = Math.round(diff1/(1000*60*60*24));
 					var weeks = Math.round(days/7);
-					var months=date2.getMonth()-date1.getMonth();
-					var years= Math.round(date2.getFullYear()- date1.getFullYear());
+					var months=Math.round(days/30);
+					var years= parseFloat(days/365).toFixed(2);
 
-					document.getElementById("r1").value=years+" yrs. "+months+" months "+weeks+" weeks "+days+" days";
+					document.getElementById("r1").value="Yrs:"+years+", Months:"+months+", Weeks:"+weeks+", Days:"+days;
 				}
 				else
 				{
@@ -600,7 +600,7 @@
 					        {
 					            h1=parseInt(h1)+12;            
 					        }
-						else if(document.getElementById("am1").checked && document.getElementById("d3_h").value=="12")
+						if(document.getElementById("am1").checked && document.getElementById("d3_h").value=="12")
 							{
 								h1=0;
 							}
@@ -609,9 +609,9 @@
 					        {
 					            h2=parseInt(h2)+12;            
 					        } 
-					    else if(document.getElementById("am1").checked && document.getElementById("d4_h").value=="12")
+					    if(document.getElementById("am2").checked && document.getElementById("d4_h").value=="12")
 							{
-								h1=0;
+								h2=0;
 							}
 					        
 					    min1=parseInt(min1)+parseInt(h1)*60;
