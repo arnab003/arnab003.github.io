@@ -403,14 +403,14 @@
 				 };
 			}
 
-			var divMC=createElement("div", {"style":"width:95%; margin:2%"}, formMC);	
-			var b1=createElement("input", {"type":"button","value":"Calculate","style":"margin:2%; float:left;"}, divMC);
+			var divMC=createElement("div", {"style":"width:95%; margin:2%"}, formMC);			
+			createElement("input", {"type":"reset","value":"Reset","style":"margin:2%; float:left;"}, divMC);
+			var b1=createElement("input", {"type":"button","value":"Calculate","style":"margin:2%; float:right;"}, divMC);
 			b1.onclick=function()
 				 {	
 			   		calculate();
 
 				 };
-			createElement("input", {"type":"reset","value":"Reset","style":"margin:2%; float:right;"}, divMC);
 
 			function calculate()
 			{
