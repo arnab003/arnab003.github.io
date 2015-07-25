@@ -196,11 +196,22 @@ var prevValue=0;
 
 	function decimal(val)
 	{
-		if (flagDecimal==false) 
-			{
-				document.getElementById("view").value = document.getElementById("view").value + val.value;
-				flagDecimal=true;
-			};
+		var str=(document.getElementById("view").value).toString();
+
+				for(i=0;i<str.length;i++)
+				{
+					if(str.charAt(i)==".")
+					{
+						flagDecimal=true;
+						break;
+					}
+				}
+
+				if (flagDecimal==false) 
+					{
+						document.getElementById("view").value = document.getElementById("view").value + val.value;
+						flagDecimal=true;
+					};
 	}
 
 	function cls()
