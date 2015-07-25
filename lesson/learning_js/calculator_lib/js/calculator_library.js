@@ -483,6 +483,10 @@
 				res1();
 			}
 			var inp=createElement("input", {"type":"text","id":"r1","size":"30","style":"text-align:right; float:right","placeholder":"Date Difference"}, divDC);
+			inp.onkeypress=function()
+			{
+				return false;
+			}
 
 			createElement("hr",{},DCwrapper);
 
@@ -521,6 +525,10 @@
 				res2();
 			}
 			var inp=createElement("input", {"type":"text","id":"r2","size":"30","style":"text-align:right;margin-left:25%;","placeholder":"Time Difference"}, divDC);
+			np.onkeypress=function()
+			{
+				return false;
+			}
 
 			createElement("hr",{},DCwrapper);
 
@@ -544,6 +552,10 @@
 				res3();
 			}
 			var inp=createElement("input", {"type":"text","id":"r3","size":"40","style":"text-align:right;float:right;","placeholder":"Calculated TimeStamp"}, divDC);
+			np.onkeypress=function()
+			{
+				return false;
+			}
 
 			function res1()
 			{
