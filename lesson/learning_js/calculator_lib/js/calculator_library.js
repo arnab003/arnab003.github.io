@@ -524,7 +524,7 @@
 			{
 				res2();
 			}
-			var inp=createElement("input", {"type":"text","id":"r2","size":"30","style":"text-align:right;margin-left:25%;","placeholder":"Time Difference"}, divDC);
+			var inp=createElement("input", {"type":"text","id":"r2","size":"30","style":"text-align:right;margin-left:23%;","placeholder":"Time Difference"}, divDC);
 			inp.onkeypress=function()
 			{
 				return false;
