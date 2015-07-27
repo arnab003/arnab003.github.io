@@ -482,7 +482,7 @@
 			{
 				res1();
 			}
-			var inp=createElement("input", {"type":"text","id":"r1","size":"42","style":"text-align:right; float:right","placeholder":"Date Difference"}, divDC);
+			var inp=createElement("input", {"type":"text","id":"r1","size":"35","style":"text-align:right; float:right","placeholder":"Date Difference"}, divDC);
 			inp.onkeypress=function()
 			{
 				return false;
