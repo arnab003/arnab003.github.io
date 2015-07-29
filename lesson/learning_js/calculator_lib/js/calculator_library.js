@@ -320,6 +320,11 @@
 				}
 			}
 
+			function butclick()
+			{
+				butnClick(this);
+			}
+
 			var displayDiv = createElement("div", {"className":"displ","style":"width: 90%;height: 45px;margin: 4%;"}, BCwrapper);
 			var displayElement = createElement("input",{"type":"text","id":"view","value":"0","style":"width: 99%;height: 100%;text-align: right;border-radius: 3px;font-size: 25px;"}, displayDiv);		
 			displayElement.onkeypress=function()
@@ -331,10 +336,7 @@
 			for(i in butns)
 			{
 				var buttonElement = createElement("input", {"type":"button","value":butns[i],"style":"width: 21%;height: 12%;margin: 2% 0% 2% 2%;display: inline-block;vertical-align: middle;"}, buttonDiv);
-				buttonElement.addEventListener("click", function()
-				 {	
-			   				butnClick(this);
-				 });
+				buttonElement.addEventListener("click", butclick);
 			}		
 
 		}//end of basic_calculator()
@@ -413,17 +415,18 @@
 							},
 
 						];
+						function numCheck()
+						{
+							return isNumber(event);
+						}
+						
 			for(var i in contentMC)
 			{
 				var divMC=createElement("div", {"style":"width:95%; margin:2%"}, formMC);			
 				var t = document.createTextNode(contentMC[i].title);
 				divMC.appendChild(t);
 				var inp=createElement("input", {"type":"text","name":contentMC[i].name,"size":"12","style":"text-align:right; float:right"}, divMC);
-				inp.onkeypress=function()
-				 {	
-			   		return isNumber(event);
-
-				 };
+				inp.onkeypress=numCheck;
 			}
 
 			var divMC=createElement("div", {"style":"width:95%; margin:2%"}, formMC);			
