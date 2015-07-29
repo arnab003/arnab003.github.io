@@ -1,0 +1,343 @@
+		@font-face {
+		    font-family: myFirstFont;
+		    src: url(../fonts/fontawesome-webfont.ttf);
+		}
+
+		body
+		{
+			margin:0;
+			padding:0;
+			font-family: myFirstFont;
+		}
+
+		a:link 
+		{
+			color: inherit;
+		}
+
+		a:visited 
+		{
+			color: inherit;
+		}
+
+		a:hover
+		{
+			color: #16B891;
+			text-decoration: none;
+		}
+
+		.main
+		{
+			position: absolute;
+			width:100%;
+		    height:100%;
+		    margin:0 auto;
+		}
+
+		.main .leftPanel
+		{
+			position: fixed;
+			width: 30%;
+			height: 100%;
+			background-image: url(../../images/bg.jpg), url(../../images/bgR.jpg);
+			background-size: contain;
+			background-repeat: no-repeat, repeat-y;
+		}
+
+		.main .rightPanel
+		{
+			margin-left: 30%;
+			height: 100%;
+			padding-top: 4.5%;
+		}
+
+		.main .leftPanel .profile
+		{
+			display: inline-block;
+			float: right;
+			margin-top: 20%;
+			margin-right: 10%;
+			width: 200px;
+			height: 200px;
+		}
+
+		#dp
+		{
+			display: block;
+			float: right;
+			width: 36%;
+			height: 36%;
+			border-radius: 100%;
+			background-image: url(../../images/avatar.jpg);
+			background-size: cover;
+			margin-bottom: 6%;
+		}
+
+		#name
+		{
+			display: block;
+			clear: both;
+			float: right;
+			margin: 5% 0% 2.5% 0%;
+			color: white;
+			
+			font-size: 90%;
+		}
+
+		.subName
+		{
+			display: block;
+			clear: both;
+			float: right;
+			margin: 2.5% 0% 2.5% 0%;
+			color: #bdbab3;
+			
+			font-size: 90%;
+		}
+
+		.bottomPanel
+		{
+			display: inline-block;
+			float: right;
+			margin-top: 70%;
+			margin-right: 10%;
+			width: 50%;
+		}
+
+		.social
+		{
+			display: block;
+			float: right;
+			max-height: 9%;
+			max-width: 9%;
+			margin: 10% 0% 5% 5%;
+		}
+
+		.social img
+		{
+			max-height: 100%;
+			max-width: 100%;
+		}
+
+		#info
+		{
+			display: block;
+			clear: both;
+			float: right;
+			
+			font-size: 60%;
+			color: #8a8685;
+		}
+
+		.heading
+		{
+			margin: 0% 20% 3% 6%;
+			
+		}
+
+		.heading div h2 span
+		{
+			line-height: 1.6em; 
+			font-size: 100%; 
+			display: inline;
+			color: #7c7c7c;
+		}
+
+		.heading div h4
+		{
+			color: #7c7c7c;
+		}
+
+		.heading div p
+		{
+			margin-top: 3%;
+		}
+
+		.heading div p span
+		{
+			line-height: 1.8em;
+			display: inline;
+			font-size: 75%;
+			color: #989898;
+		}
+
+		.buttons
+		{
+			margin-top: 2%;
+			background-color: transparent;
+			border: 2px solid #ededed;
+  			color: #686868;
+  			border-radius: 4px;
+  			width: 8.5em;
+  			height: 2.7em;
+  			font-size: 75%;
+		}
+
+		.buttons:hover
+		{
+			border: 2px solid #16B891;
+  			color: #16B891;
+		}
+
+		.workWrap
+		{
+			border-top: 2px solid #EFEFEF;
+			border-bottom: 2px solid #EFEFEF;
+			margin: 5% 5% 7% 6%;
+			padding-top: 4%;
+			padding-bottom: 6%;
+			color: #7c7c7c;
+			width: 75%;
+		}
+
+		.works
+		{
+			display: inline-block;
+			width: 100%;
+		}
+
+		.works div
+		{
+			position: relative;
+			float: left;
+			margin: 3% 0% 1% 0%;
+			width: 47%;
+		}
+
+		.works div:nth-child(2n+1) 
+		{
+  			margin-right: 6%;
+		}
+
+
+		.works div p
+		{
+			padding: 0;
+			margin: 0;
+		}
+
+		.works .works-p1
+		{
+			margin-top: 4%;
+			margin-bottom: 1.5%;
+			color: #7c7c7c;
+			font-size: 75%;
+			font-weight: bold;
+		}
+
+		.works .works-p2
+		{
+			margin-top: 1%;
+			margin-bottom: 1.5%;
+			line-height: 1.6em; 
+			font-size: 70%;
+			color: #7c7c7c;
+		}
+
+		.works img
+		{
+			border-radius: 3%;
+			width: 100%;
+			border: 1px solid #EFEFEF;
+		}
+
+		.ContactWrapper
+		{
+			display: inline-block;
+			width: 74%;
+			margin: 0% 20% 3% 6%;
+			height: 275px;
+		}
+
+		.ContactWrapper .form
+		{
+			display: inline-block;
+			width: 65%;
+			float: left;
+			height: 300px;
+		}
+
+		.ContactWrapper .details
+		{
+			display: inline-block;
+			float: right;
+			width: 33%;
+			height: auto;
+		}
+
+		.ContactWrapper .form input[type=text], input[type=email]
+		{
+			margin: 0% 4% 4% 0%;
+			height: 2em;
+			width: 15em;
+			padding: 5px 5px 5px 12px;
+		}
+
+		.ContactWrapper .form textarea
+		{
+			padding: 15px 5px 5px 12px;
+			width: 87%;
+			height: 9em;
+			margin-bottom: 4%;
+		}
+
+		.ContactWrapper .form input[type=text], input[type=email], textarea
+		{
+			background-color: #ececec;
+			border-radius: 5px;
+			border: none;
+			font-size: 75%;
+			font-family: myFirstFont;
+		}
+
+		.ContactWrapper .details .icons
+		{
+			float: left;
+			display: inline-block;
+			width: 18px;
+			height: 18px;
+			margin-right: 5%;
+			margin-bottom: 5%;
+		}
+
+		.ContactWrapper .details .detl
+		{
+			float: left;
+			width: 80%;
+			margin-bottom: 9%;
+		}
+
+		.ContactWrapper .details .detl div
+		{
+			position: relative;
+			float: right;
+			display: inline-block;
+			width: 100%;
+			line-height: 1.8em;
+			font-size: 75%;
+			color: #989898;
+		}
+
+		#home
+		{
+			background-image: url(../../images/home32.png);
+			background-size: cover;
+		}
+
+		#phone
+		{
+			background-image: url(../../images/phone32.png);
+			background-size: cover;
+		}
+
+		#mail
+		{
+			background-image: url(../../images/mail32.png);
+			background-size: cover;
+		}
+
+		.ContactWrapper .details .detl div u.dotted
+		{
+			border-bottom: 1px dashed #989898;
+			text-decoration: none; 
+		}
