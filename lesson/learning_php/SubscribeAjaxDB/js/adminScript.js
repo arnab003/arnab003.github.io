@@ -93,14 +93,5 @@
     //function to cancel edit mode
     function cancel(Id)
     {
-      document.getElementById("U"+Id).value="Edit";
-      document.getElementById("U"+Id).id="ed"+Id;
-      document.getElementById("ed"+Id).setAttribute("onclick","edit("+Id+");");
-      document.getElementById("can"+Id).value="Delete";
-      document.getElementById("can"+Id).id="dlt"+Id;
-      document.getElementById("dlt"+Id).setAttribute("onclick","dlt("+Id+");");
-      for(var i=1;i<=11;i++)
-      {
-        document.getElementById("inp"+i+Id).disabled=true;
-      }
+      ajax("mod.php?action=cancel&id="+Id,Id);
     }
