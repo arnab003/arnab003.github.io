@@ -85,7 +85,7 @@
 					<tr>
 						<td valign="top"><span>States</span></td>
 						<td>
-							<select id="stateID" name="state">
+							<select id="stateID" name="state" disabled>
 							<option value=""></option>
 						    </select>
 						    <span id="stateError" class="Error"></span>

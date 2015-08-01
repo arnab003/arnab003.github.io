@@ -152,6 +152,13 @@ function clk(a)
 	    el.style.visibility = bool ? "visible" : "hidden";
     }  
 
+    //function to clear states
+    function clearSelect()
+    {
+        document.getElementById("stateID").innerHTML="";       
+        document.getElementById("stateID").disabled=true;
+    }
+
     //function to check all input validations and insertion in database via ajax call
     function checkInsert()
     {   
