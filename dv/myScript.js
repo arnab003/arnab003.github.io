@@ -26,11 +26,23 @@ var generate_category=function(str) {
 			return "#e41a1c";
 		}
 
-		else if(str.match(/(\bsport\b|\bfootball\b|\bcricket\b|\bkabaddi\b|\bisl\b|india)/gi)) {
+		else if(str.match(/(\bsport\b|\bfootball\b|\bcricket\b|\bkabaddi\b|\bisl\b)/gi)) {
 			return "#fb9a99";
 		}
 		else if(str.match(/(jaya|abhishek|family|aishwarya|\bson\b|wives|wife|daughter|grand daughter|aradhya|mother|father)/gi)) {
 			return "#33a02c";
+		}
+		else if(str.match(/(kbc)/gi)) {
+			return "#ff7f00";
+		}
+		else if(str.match(/(india)/gi)) {
+			return "purple";
+		}
+		else if(str.match(/(\bpeace\b|\bhappiness\b|\blove\b|\bfun\b|\bgreat\b|\bfantastic\b|\bwonderful\b|\bincredible\b|\bbrilliant\b)/gi)) {
+			return "#969696";
+		}
+		else if(str.match(/("|')/gi)) {
+			return "grey";
 		}
 		else
 			return "black";
@@ -60,11 +72,8 @@ this.attr("r",(10/max)*obj[i].favorite_count);
      for (var k = 0; k < sides; k++) {
 
        var cx = 0 + radius + (k * diameter);
-       if(i<=732) {
-	       console.log(obj[i].favorite_count);
-	       console.log(i);
-   		}
-       if(length>=0 && i<=732) {
+
+       if(length>=0) {
        	   var anim = Raphael.animation({cx: cx, cy: cy}, 2e3);
        	   var colr=generate_category(obj[i].text);
 
