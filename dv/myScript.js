@@ -1,14 +1,3 @@
-
-var cat1=[];
-var cat2=[];
-var cat3=[];
-var cat4=[];
-var cat5=[];
-var cat6=[];
-var cat7=[];
-var cat8=[];
-var cat9=[];
-
 var R;
 
 var max=tweet_data[0].favorite_count,loc;
@@ -41,7 +30,7 @@ var generate_category=function(str) {
 		else if(str.match(/(\bpeace\b|\bhappiness\b|\blove\b|\bfun\b|\bgreat\b|\bfantastic\b|\bwonderful\b|\bincredible\b|\bbrilliant\b)/gi)) {
 			return "#969696";
 		}
-		else if(str.match(/("|')/gi)) {
+		else if(str.match(/(\W"\W|\W'\W)/gi)) {
 			return "grey";
 		}
 		else
