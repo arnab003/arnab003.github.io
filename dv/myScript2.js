@@ -102,14 +102,16 @@
 					anim = Raphael.animation({cx: bubbles[index].cx, cy: bubbles[index].cy}, 2e3);
 					c = R.circle(Math.floor(Math.random() * 751), Math.floor(Math.random() * 651), bubbles[index].radius).attr({
 						fill: bubbles[index].color,
-						stroke: 'none'
+						stroke: 'none',
 					}).data("i",bubbles[index].data).hover(function(){//adding hover functionality to each bubble
 						this.attr("title",this.data("i"));
 						this.attr("r", 20);
 						this.attr("stroke", "black");
+						this.attr('fill-opacity', 0.7);
 					}).mouseout((function(m){return function(){//adding mouseout functionality to each bubble
 						this.attr("r",bubbles[m].radius);
 						this.attr("stroke", "none");
+						this.attr('fill-opacity', 1);
 					}})(index)).animate(anim); 
 				}, i * 100);
 			})(i);
