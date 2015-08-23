@@ -11,7 +11,7 @@ var max=tweet_data[0].favorite_count,loc;
 
 var generate_category=function(str) {
 
-		if(str.match(/(\bcinema\b|\bcinemas\b|\bfilms\b|\bmovies\b|\bmovie\b|\bbioscope\b)/gi)) {
+		if(str.match(/(\bcinema\b|\bcinemas\b|\bfilms\b|\bmovies\b|\bmovie\b|\bbioscope\b|\bshooting\b)/gi)) {
 			return "#e41a1c";
 		}
 
@@ -25,13 +25,13 @@ var generate_category=function(str) {
 			return "#ff7f00";
 		}
 		else if(str.match(/(india)/gi)) {
-			return "purple";
+			return "#428bca";
 		}
 		else if(str.match(/(\bpeace\b|\bhappiness\b|\blove\b|\bfun\b|\bgreat\b|\bfantastic\b|\bwonderful\b|\bincredible\b|\bbrilliant\b)/gi)) {
-			return "#969696";
+			return "purple";
 		}
 		else if(str.match(/(\W"\W|\W'\W)/gi)) {
-			return "grey";
+			return "#969696";
 		}
 		else
 			return "black";
