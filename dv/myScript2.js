@@ -35,7 +35,7 @@
 	(function render() {
 
 		var R = Raphael ( 600,5,750,650 ),
-		R_text = Raphael ( 600,5,400,200 ),
+		R_text = Raphael ( 600,5,260,50 ),
 		limit = 0,
 		l = 0,
 		level_angle,
@@ -107,7 +107,7 @@
 						this.attr("title",this.data("i"));
 						this.attr("r", 20);
 						this.attr("stroke", "black");
-						this.attr('fill-opacity', 0.7);
+						this.attr('fill-opacity', 0.8);
 					}).mouseout((function(m){return function(){//adding mouseout functionality to each bubble
 						this.attr("r",bubbles[m].radius);
 						this.attr("stroke", "none");
