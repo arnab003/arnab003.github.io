@@ -104,8 +104,8 @@
 						fill: bubbles[index].color,
 						stroke: 'none',
 					}).data("i",bubbles[index].data).hover(function(){//adding hover functionality to each bubble
+						this.attr("title",this.data("i"));
 						this.animate({
-						    "title" : this.data("i"),
 						    "r": 20,
 						    "stroke": "black",
 						    'fill-opacity': 0.8
