@@ -64,7 +64,7 @@
 		//stores each bubble details(coordinates, radius, datas) in an array of objects
 		for ( i = 0; i < data_limit; ) {
 
-			if ( i % 6 == 0 ) {
+			if ( i % 6 === 0 ) {
 				limit+= 6;
 				l+= 20;
 				level_angle = 60 * ( 1 / level_angle_factor );
@@ -79,9 +79,9 @@
 						cy : 330 + ( l * Math.sin(angle * (Math.PI / 180))),
 						radius : Math.ceil(((10 / max) * tweet_data[i].favorite_count) + 3),
 						color : generate_category(tweet_data[i].text),
-						date : tweet_data[i].created_at,
+						date : tweet_data[i].created_at.replace(/[+](0000)/g," "),
 						data : "Tweet: " + tweet_data[i].text + "\nFavorite Count: " + tweet_data[i].favorite_count + "\nRetweet Count: " + tweet_data[i].retweet_count + "\nDate: " + tweet_data[i].created_at
-					}
+					};
 					bubbles.push(objct);
 					data_limit_copy--;
 					angle+= level_angle;
@@ -112,7 +112,7 @@
 						this.attr("r",bubbles[m].radius);
 						this.attr("stroke", "none");
 						this.attr('fill-opacity', 1);
-					}})(index)).animate(anim); 
+					};})(index)).animate(anim); 
 				}, i * 100);
 			})(i);
 		}//end of loop
