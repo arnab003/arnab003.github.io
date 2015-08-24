@@ -104,14 +104,18 @@
 						fill: bubbles[index].color,
 						stroke: 'none',
 					}).data("i",bubbles[index].data).hover(function(){//adding hover functionality to each bubble
-						this.attr("title",this.data("i"));
-						this.attr("r", 20);
-						this.attr("stroke", "black");
-						this.attr('fill-opacity', 0.8);
+						this.animate({
+						    "title" : this.data("i"),
+						    "r": 20,
+						    "stroke": "black",
+						    'fill-opacity': 0.8
+						}, 600, 'easeIn');
 					}).mouseout((function(m){return function(){//adding mouseout functionality to each bubble
-						this.attr("r",bubbles[m].radius);
-						this.attr("stroke", "none");
-						this.attr('fill-opacity', 1);
+						this.animate({
+						    "r" : bubbles[m].radius,
+						    "stroke": "none",
+						    'fill-opacity': 1
+						}, 600, 'easeOut');
 					};})(index)).animate(anim); 
 				}, i * 100);
 			})(i);
