@@ -86,7 +86,7 @@
 					data_limit_copy--;
 					angle+= level_angle;
 					i++;
-				}//end of if
+				}//end of if block
 
 			}//end of inner loop
 			level_angle_factor++;
@@ -123,84 +123,4 @@
 
 	})();//end of render()
 
-})();
-
-//-----------------------------------EXPERIMENT---------------------------------------------
-
-/*var x,y,angle1=0,angle2=0,angle3=0, angle4=0,count=1;*/
-
-/*for ( var i=0;i<6;i++) {
-
-	x=150+(20*Math.cos(angle1 * (Math.PI / 180)));
-	y=150+(20*Math.sin(angle1 * (Math.PI / 180)));
-
-	var c = R.circle(x, y, 10).attr({
-	 fill: "black",
-	 stroke: 'none'
-	}).data("i",count).hover(function(){
-            this.attr("title",this.data("i"));
-            });
-	angle1+=60;
-	count++;
-}
-
-for ( var i=0;i<12;i++) {
-
-	x=150+(40*Math.cos(angle2 * (Math.PI / 180)));
-	y=150+(40*Math.sin(angle2 * (Math.PI / 180)));
-
-	var c = R.circle(x, y, 10).attr({
-	 fill: "black",
-	 stroke: 'none'
-	}).data("i",count).hover(function(){
-            this.attr("title",this.data("i"));
-            });
-	angle2+=30;
-	count++;
-}
-
-for ( var i=0;i<18;i++) {
-
-	x=150+(60*Math.cos(angle3 * (Math.PI / 180)));
-	y=150+(60*Math.sin(angle3 * (Math.PI / 180)));
-
-	var c = R.circle(x, y, 10).attr({
-	 fill: "black",
-	 stroke: 'none'
-	}).data("i",count).hover(function(){
-            this.attr("title",this.data("i"));
-            });
-	angle3+=20;
-	count++;
-}
-
-for ( var i=0;i<24;i++) {
-
-	x=150+(80*Math.cos(angle4 * (Math.PI / 180)));
-	y=150+(80*Math.sin(angle4 * (Math.PI / 180)));
-
-	var c = R.circle(x, y, 10).attr({
-	 fill: "black",
-	 stroke: 'none'
-	}).data("i",count).hover(function(){
-            this.attr("title",this.data("i"));
-            });
-	angle4+=15;
-	count++;
-}
-
-var angle5=0;
-for ( var i=0;i<30;i++) {
-
-	x=150+(100*Math.cos(angle5 * (Math.PI / 180)));
-	y=150+(100*Math.sin(angle5 * (Math.PI / 180)));
-
-	var c = R.circle(x, y, 10).attr({
-	 fill: "black",
-	 stroke: 'none'
-	}).data("i",count).hover(function(){
-            this.attr("title",this.data("i"));
-            });
-	angle5+=12;
-	count++;
-}*/
+})();// end of wrapper function
