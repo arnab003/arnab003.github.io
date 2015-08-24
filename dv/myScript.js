@@ -1,4 +1,5 @@
 var R;
+var t = R.text(50, 50, "Raphaël\nkicks\nbutt!");
 
 var max=tweet_data[0].favorite_count,loc;
 	for (var sr = 1; sr < tweet_data.length; sr++)
@@ -85,17 +86,3 @@ this.attr("r",(10/max)*obj[i].favorite_count);
 };
 
 populate_viz(tweet_data);
-
-function render(value) {
-		
-		if (value==1) {
-			R.clear();
-			populate_viz(cat1);
-		}
-		else if (value==2) {
-			R.clear();
-			populate_viz(cat2);
-		}
-	}
-
-	//rad(obj[i].retweet_count)
